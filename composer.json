@@ -1,0 +1,45 @@
+{
+    "name": "arinasystems/laravel-localized-slug",
+    "description": "Easy generation localized slug for Laravel Eloquent models",
+    "authors": [
+        {
+            "name": "ArinaSystems Agency",
+            "email": "arinasystems@gmail.com"
+        }
+    ],
+    "keywords": [
+        "laravel",
+        "eloquent-sluggable",
+        "arinasystems"
+    ],
+    "homepage": "https://github.com/arinasystems/laravel-localized-slug",
+    "license": "MIT",
+    "require": {
+        "php": "^7.1",
+        "illuminate/config": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+        "illuminate/database": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+        "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.5.0|~3.6.0|~3.7.0|~3.8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ArinaSystems\\LocalizedSlug\\Providers\\LocalizedSlugServiceProvider",
+                "ArinaSystems\\LocalizedSlug\\Providers\\SluggerServiceProvider"
+            ],
+            "aliases": {
+                "Slugger": "ArinaSystems\\LocalizedSlug\\Facades\\Slugger"
+            }
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit src/Tests/"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArinaSystems\\LocalizedSlug\\": "src"
+        }
+    }
+}
